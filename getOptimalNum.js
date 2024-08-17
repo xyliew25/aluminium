@@ -29,7 +29,13 @@ function getOptimalNum(maxLength, lengthCount) {
     return res;
 }
 
-function genOutput(optimalNum, maxLength) {
+function genOutput(maxLength, lengthCount) {
+    if (maxLength < Math.min(lengthCount)) {
+        return "Not possible."
+    }
+
+    const optimalNum = getOptimalNum(maxLength, lengthCount);
+
     let output = "";
     let totalCut = 0;
     let totalWaste = 0;
@@ -43,6 +49,6 @@ function genOutput(optimalNum, maxLength) {
         output += `${i + 1}. ${JSON.stringify(cuts)} ${cut}\n`;
     });
     
-    output += `Wasted ${totalWaste} in total`;
+    output += `Wasted ${totalWaste} in total.`;
     return output;
 }
