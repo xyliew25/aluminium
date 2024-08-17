@@ -29,7 +29,7 @@ function getOptimalNum(maxLength, lengthCount) {
     return res;
 }
 
-function genOutput(maxLength, lengthCount) {
+function genOptimalNumOutput(maxLength, lengthCount) {
     if (maxLength < Math.min(lengthCount)) {
         return "Not possible."
     }

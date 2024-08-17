@@ -30,8 +30,7 @@ document.getElementById('btn').addEventListener('click', function() {
             return;
         }
         const lengthCount = parseLengthCount(e.target.result);
-        const optimalNum = getOptimalNum(maxLength, lengthCount);
-        const output = genOutput(optimalNum, maxLength);
+        const output = genOptimalNumOutput(maxLength, lengthCount);
         document.getElementById('output').textContent = output;
     };
     reader.readAsText(file);
