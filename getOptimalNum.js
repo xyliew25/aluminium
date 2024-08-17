@@ -46,25 +46,3 @@ function genOutput(optimalNum, maxLength) {
     output += `Wasted ${totalWaste} in total`;
     return output;
 }
-
-document.getElementById('btn').addEventListener('click', function() {
-    const maxLength = 3.3;
-    const lengthCount = {
-        0.42: 76,
-        1.294: 6,
-        1.28: 2,
-        1.246: 2,
-        1.245: 2,
-        1.402: 12,
-        1.401: 2,
-        1.387: 2,
-        1.482: 8,
-        1.342: 6,
-        1.451: 10,
-        1.25: 24,
-    };
-
-    const optimalNum = getOptimalNum(maxLength, lengthCount);
-    const output = genOutput(optimalNum, maxLength);
-    document.getElementById('output').textContent = output;
-});
